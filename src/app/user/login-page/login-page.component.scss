@@ -2,6 +2,18 @@
     background-color: #ffff00;
 }
 
+h1{
+   // background-color: black;
+    text-align: center;
+    color: black;
+    font-size: 60px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    letter-spacing: 24px;
+}
+
 .wrapper {
   padding-top: 20px;
   padding-bottom: 20px;  
@@ -26,11 +38,14 @@ box-shadow: 3px 3px 11px 0px rgba(0,0,0,0.75);
 }
 
 #ico {
-    width: 100px; 
+    margin-top: auto;
+    margin-bottom: auto;
+    top: 50%;
+    width: 120px; 
 }
 
 #line {
-    width: 10px;  
+    width: 8px;  
     background-color: rgb(27, 27, 27);
     display: flex; 
     border-radius: 5px;
@@ -38,11 +53,15 @@ box-shadow: 3px 3px 11px 0px rgba(0,0,0,0.75);
 
 #form {
    // width: 145px;
+   text-align: center;
+   width: 152px;
+   padding-left: 10px;
+   padding-right: 10px;
 }
 
 .one {
     height: 100%;
-    width: 4px;
+    width: 3px;
 }
 
 .two{
@@ -58,4 +77,8 @@ box-shadow: 3px 3px 11px 0px rgba(0,0,0,0.75);
 
 .black{
     height: 50px;
+}
+
+#title {
+    margin-top: 50px;
 }
