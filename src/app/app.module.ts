@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { HostListener, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -8,6 +8,7 @@ import { LoginPageComponent } from './user/login-page/login-page.component';
 import { FormsModule } from '@angular/forms';
 import { DashboardPageComponent } from './dashboard/dashboard-page/dashboard-page.component';
 import { NavPageComponent } from './dashboard/nav-page/nav-page.component';
+import { WeclomePageComponent } from './dashboard/weclome-page/weclome-page.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +16,14 @@ import { NavPageComponent } from './dashboard/nav-page/nav-page.component';
     RegisterPageComponent,
     LoginPageComponent,
     DashboardPageComponent,
-    NavPageComponent
+    NavPageComponent,
+    WeclomePageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
