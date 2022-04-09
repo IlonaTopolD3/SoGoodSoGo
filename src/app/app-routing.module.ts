@@ -6,13 +6,14 @@ import { LoginPageComponent } from './user/login-page/login-page.component';
 import { RegisterPageComponent } from './user/register-page/register-page.component';
 
 const routes: Routes = [
-  { path: '', component: LoginPageComponent },
   {
-    path: 'dashboard', component: DashboardPageComponent, children: [
-      { path: '', component: WeclomePageComponent }
+    path: '', component: DashboardPageComponent, children: [
+      { path: '', component: WeclomePageComponent },
+      { path: 'login', component: LoginPageComponent },
+      { path: 'register', component: RegisterPageComponent }
     ]
-  },
-  { path: 'register', component: RegisterPageComponent }
+  }
+  
 ];
 
 @NgModule({
