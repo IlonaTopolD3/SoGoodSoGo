@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { DashboardPageComponent } from './dashboard/dashboard-page/dashboard-page.component';
 import { NavPageComponent } from './dashboard/nav-page/nav-page.component';
 import { WeclomePageComponent } from './dashboard/weclome-page/weclome-page.component';
+import { FaqPageComponent } from './dashboard/faq-page/faq-page.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { WeclomePageComponent } from './dashboard/weclome-page/weclome-page.comp
     LoginPageComponent,
     DashboardPageComponent,
     NavPageComponent,
-    WeclomePageComponent
+    WeclomePageComponent,
+    FaqPageComponent
   ],
   imports: [
     BrowserModule,
