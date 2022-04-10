@@ -17,6 +17,15 @@ export class FaqPageComponent implements OnInit {
     this.faqList = [
       {id: 1,question: 'Ile to kosztuje?', answer: 'Prowadzenie konta jest całkowicie za darmo.'},
       {id: 2,question: 'Czy potrzebujemy specjalny sprzęt?', answer: 'Do obsługi wystarczy urządzenie z dostępem do internetu i przeglądarką internetową'},
+      {id: 3,question: 'Czy potrzebujemy specjalny sprzęt?', answer: 'Do obsługi wystarczy urządzenie z dostępem do internetu i przeglądarką internetową'},
+      {id: 4,question: 'Czy potrzebujemy specjalny sprzęt?', answer: 'Do obsługi wystarczy urządzenie z dostępem do internetu i przeglądarką internetową'},
+      {id: 5,question: 'Czy potrzebujemy specjalny sprzęt?', answer: 'Do obsługi wystarczy urządzenie z dostępem do internetu i przeglądarką internetową'},
+      {id: 6,question: 'Czy potrzebujemy specjalny sprzęt?', answer: 'Do obsługi wystarczy urządzenie z dostępem do internetu i przeglądarką internetową'},
+      {id: 7,question: 'Czy potrzebujemy specjalny sprzęt?', answer: 'Do obsługi wystarczy urządzenie z dostępem do internetu i przeglądarką internetową'},
+      {id: 8,question: 'Czy potrzebujemy specjalny sprzęt?', answer: 'Do obsługi wystarczy urządzenie z dostępem do internetu i przeglądarką internetową'},
+      {id: 9,question: 'Czy potrzebujemy specjalny sprzęt?', answer: 'Do obsługi wystarczy urządzenie z dostępem do internetu i przeglądarką internetową'},
+      {id: 9,question: 'Czy potrzebujemy specjalny sprzęt?', answer: 'Do obsługi wystarczy urządzenie z dostępem do internetu i przeglądarką internetową'},
+      {id: 9,question: 'Czy potrzebujemy specjalny sprzęt?', answer: 'Do obsługi wystarczy urządzenie z dostępem do internetu i przeglądarką internetową'}
     ];
   }
 
