@@ -1,0 +1,23 @@
+section {
+  height: 500px;
+
+  & .row {
+    height: 100%;
+
+    & .col {
+
+      //  padding: 0;
+
+      & .left {
+        background-color: #F5F5EF;
+        height: 100%;
+      }
+
+      & .right {
+        background-color: #FFDB15;
+        height: 100%;
+      }
+    }
+  }
+
+}
