@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faqList } from 'src/app/interface/faqListInterface';
+import { FaqList } from 'src/app/interface/faqListInterface';
 import { FaqServiceService } from 'src/app/services/faq-service.service';
 
 @Component({
@@ -9,20 +9,29 @@ import { FaqServiceService } from 'src/app/services/faq-service.service';
 })
 export class FaqPageComponent implements OnInit {
 
-  faqList : faqList[] = [];
+  faqList : FaqList[] = [];
   show: number = -1;
-
+  dlugosc: number = 0;
+  faqElement: FaqList = { id:0,question:'',answer:'' };
   
 
   constructor(private faqS: FaqServiceService) { }
 
   ngOnInit(): void {
+    this.getList();  
+  }
 
+  getList(){
     this.faqS.getFaq().subscribe(items => {
       this.faqList = items;
-    })
-        
+      this.dlugosc = this.faqList.length;
+    });
   }
+
+  addQuestion(){
+    this.faqElement.id = this.dlugosc+1;
+    this.faqS.addFaq(this.faqElement);
+  } 
 
   collapse(i: number){
 
@@ -31,8 +40,6 @@ export class FaqPageComponent implements OnInit {
     } else {
       this.show = i;
     }
-   
-    //console.log("- Show: "+ this.show + " - i: " + i);
   }
 
 }

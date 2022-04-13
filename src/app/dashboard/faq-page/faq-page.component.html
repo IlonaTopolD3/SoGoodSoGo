@@ -1,3 +1,18 @@
+<div style="height: 60px;"></div>
+
+<form (ngSubmit)="addQuestion()" style="width: 500px; margin-left: auto; margin-right: auto; margin-top: 100px;">
+  <div style="margin-bottom: 20px; font-size: 20px; font-weight: bold;">Formularz tym czasowy aby można było szybko dodawć FAQ do bazy ;]</div>
+  <div class="form-floating">
+    <textarea class="form-control" [(ngModel)]="faqElement.question" name="question" placeholder="Leave a comment here" id="question"></textarea>
+    <label for="floatingTextarea">Pytanie</label>
+  </div>
+  <div class="form-floating">
+    <textarea class="form-control" [(ngModel)]="faqElement.answer" name="answer" placeholder="Leave a comment here" id="answer"></textarea>
+    <label for="floatingTextarea">Odpowiedź</label>
+  </div>
+  <button type="submit" class="btn btn-primary" >Dodaj</button>
+</form>
+
 <div class="container">
   <h1>
     "FAQ"

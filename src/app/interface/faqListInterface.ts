@@ -1,4 +1,4 @@
-export interface faqList {
+export interface FaqList {
     id: number;
     question?: string;
     answer?: string;
