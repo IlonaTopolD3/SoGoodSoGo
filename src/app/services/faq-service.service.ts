@@ -16,7 +16,8 @@ export class FaqServiceService {
     this.faqs = this.faqCollection.snapshotChanges().pipe(
       map(actions => actions.map(a => {
         const data = a.payload.doc.data() as FaqList;
-        return { ...data };
+        const docId = a.payload.doc.id;
+        return {docId, ...data };
       }))
     );
     this.faqCollection = afs.collection<FaqList>('FAQ',);
@@ -28,6 +29,11 @@ export class FaqServiceService {
 
   addFaq(data: FaqList) {
    const newId = this.afs.createId();
-   this.afs.collection('FAQ').doc(newId).set(data); 
+   this.faqCollection.doc(newId).set({docID: newId ,id: data.id, question: data.question, answer: data.answer}); 
+  }
+
+  editFaq(data: FaqList){
+    
+    this.faqCollection.doc(data.docID).update({docID: data.docID ,id: data.id, question: data.question, answer: data.answer});
   }
 }

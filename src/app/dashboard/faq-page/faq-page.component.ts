@@ -12,8 +12,7 @@ export class FaqPageComponent implements OnInit {
   faqList : FaqList[] = [];
   show: number = -1;
   dlugosc: number = 0;
-  faqElement: FaqList = { id:0,question:'',answer:'' };
-  
+  faqElement: FaqList = {docID:'', id:0 , question:'', answer:'' };
 
   constructor(private faqS: FaqServiceService) { }
 
@@ -25,6 +24,7 @@ export class FaqPageComponent implements OnInit {
     this.faqS.getFaq().subscribe(items => {
       this.faqList = items;
       this.dlugosc = this.faqList.length;
+      //console.log(this.faqList);
     });
   }
 
@@ -33,10 +33,18 @@ export class FaqPageComponent implements OnInit {
     this.faqS.addFaq(this.faqElement);
   } 
 
-  collapse(i: number){
+  editQuestion(){
+   // console.log(this.faqElement);
+    this.faqS.editFaq(this.faqElement);
+    this.faqElement = {docID:'', id:0 , question:'', answer:'' };
 
+  }
+
+  collapse(i: number){
+    this.faqElement = this.faqList[i];
     if(this.show === i){
        this.show = -1;
+       this.faqElement = {docID:'', id:0 , question:'', answer:'' };
     } else {
       this.show = i;
     }
