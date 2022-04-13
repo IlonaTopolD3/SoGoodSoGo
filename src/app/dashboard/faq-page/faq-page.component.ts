@@ -49,5 +49,4 @@ export class FaqPageComponent implements OnInit {
       this.show = i;
     }
   }
-
 }
